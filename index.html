@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--
+
+  CURRICULUM VITAE - WEBSITE
+  Nama          : Yoga Koswara
+  NIM           : 250401010510
+  Kelas         : IF210
+  Mata Kuliah   : Pemrograman Web I
+
+-->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Yoga Koswara</title>
+
+    <!-- ============ CSS (Styling halaman) ============ -->
+    <style>
+        /* Reset dasar dan pengaturan font seluruh halaman */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2933;
+            background-color: #eef2f5;
+        }
+
+        /* Wadah utama agar konten berada di tengah */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Bagian header (foto + nama) */
+        header {
+            background: linear-gradient(135deg, #0f3d5c, #1b6ca8);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Navigasi link internal */
+        nav {
+            background-color: #0c2f47;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #7fd3ff;
+        }
+
+        /* Tiap bagian konten */
+        section {
+            padding: 25px 35px;
+            border-bottom: 1px solid #e0e6eb;
+        }
+
+        h2 {
+            color: #0f3d5c;
+            border-left: 5px solid #1b6ca8;
+            padding-left: 12px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #c5d0d8;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #1b6ca8;
+            color: #ffffff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f4f7f9;
+        }
+
+        /* List */
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 12px;
+        }
+
+        /* Galeri sertifikasi */
+        .galeri {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sertif-item {
+            text-align: center;
+            width: 260px;
+        }
+
+        .galeri img {
+            width: 260px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #c5d0d8;
+        }
+
+        .sertif-item span {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #52606d;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0c2f47;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Tombol interaktif (JavaScript) */
+        .btn-sapa {
+            display: inline-block;
+            background-color: #1b6ca8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .btn-sapa:hover {
+            background-color: #0f3d5c;
+        }
+
+        /* Responsif untuk layar HP */
+        @media (max-width: 600px) {
+            section { padding: 20px; }
+            nav a { display: block; margin: 8px 0; }
+            .galeri img { width: 100%; }
+            .sertif-item { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ============ HEADER: Foto diri + Nama ============ -->
+        <header>
+            <img src="foto.jpg" alt="Foto diri Yoga Koswara">
+            <h1>Yoga Koswara</h1>
+        </header>
+
+        <!-- ============ NAVIGASI (link internal ke section) ============ -->
+        <!-- Memenuhi syarat minimal 3 link internal -->
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#skill">Keahlian</a>
+            <a href="#sertifikasi">Sertifikasi</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+        <!-- ============ TENTANG SAYA (2 paragraf + text formatting) ============ -->
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+
+            <!-- Contoh Text Formatting: bold, italic, underline, mark -->
+            <p>
+                Halo! Nama saya <strong>Yoga Koswara</strong>, seorang
+                <em>Network &amp; Security Engineer</em> yang berbasis di
+                <u>Jakarta, Indonesia</u>. Saya berfokus pada bidang
+                keamanan jaringan dan infrastruktur enterprise,
+                menangani implementasi serta troubleshooting berbagai solusi
+                keamanan untuk klien skala besar.
+            </p>
+
+            <p>
+                Pengalaman saya mencakup berbagai produk enterprise Security seperti
+                Cisco Network and Security, CyberArk Priviladge Access Manager, F5 Load Balancer, Zscaler Zero Trust Access, Aruba Wireless , Splunk Security Event Manager. 
+
+                
+            </p>
+
+            <!-- Tombol interaktif memakai JavaScript -->
+            <p>
+                <strong>Hubungi saya di:</strong>
+                <a href="https://www.linkedin.com/in/yogakoswara/" target="_blank">LinkedIn</a>
+                atau
+                <a href="mailto:yogakoswara.it@gmail.com">yogakoswara.it@gmail.com</a>
+            </p>
+        </section>
+
+        <!-- ============ PENDIDIKAN (Tabel #1) ============ -->
+        <section id="pendidikan">
+            <h2>Riwayat Pendidikan</h2>
+                <tr>
+                    <td>[2026 - Sekarang]</td>
+                    <td>Universitas Siber Asia</td>
+                    <td>Informatika (S1)</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ============ KEAHLIAN (List #1 - unordered & List #2 - ordered) ============ -->
+        <section id="skill">
+            <h2>Keahlian</h2>
+
+            <!-- List tidak berurutan (ul) -->
+            <ul>
+                <li>Network Engineering (Routing, Switching, VRF/L3VPN)</li>
+                <li>Network &amp; Endpoint Security (Firewall, ZTNA, XDR, PAM)</li>
+                <li>Produk Enterprise: Palo Alto, Zscaler, CyberArk, F5, Aruba</li>
+                <li>Security Monitoring &amp; SIEM: Splunk, SolarWinds</li>
+            </ul>
+
+            <h2>Pengalaman Kerja</h2>
+            <!-- Tabel #2 -->
+            <table>
+                <tr>
+                    <th>Periode</th>
+                    <th>Perusahaan</th>
+                    <th>Posisi</th>
+                </tr>
+                <tr>
+                    <td>Mei 2024 - Sekarang</td>
+                    <td>Packet Systems Indonesia</td>
+                    <td>Senior System Engineer &ndash; Enterprise Security Team</td>
+                </tr>
+                <tr>
+                    <td>Mar 2018 - Okt 2019</td>
+                    <td>PT Wise Pacific Venture</td>
+                    <td>Technical Consultant - Security</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ============ SERTIFIKASI (Galeri - minimal 3 gambar + List berurutan) ============ -->
+        <section id="sertifikasi">
+            <h2>Sertifikasi Profesional</h2>
+
+            <!-- List berurutan (ol) -->
+            <ol>
+                <li>Palo Alto Networks Certified XDR Engineer (2025 - 2027)</li>
+                <li>Zscaler Digital Delivery Consultant (2025 - 2027)</li>
+                <li>Splunk Enterprise Security Certified Admin (2025 - 2028)</li>
+            </ol>
+
+            <!-- Galeri 3 gambar sertifikasi -->
+            <div class="galeri">
+                <div class="sertif-item">
+                    <img src="sertif-paloalto.jpg" alt="Sertifikat Palo Alto XDR Engineer">
+                    <span>Palo Alto XDR Engineer</span>
+                </div>
+                <div class="sertif-item">
+                    <img src="sertif-zscaler.jpg" alt="Sertifikat Zscaler Digital Delivery Consultant">
+                    <span>Zscaler Digital Delivery Consultant</span>
+                </div>
+                <div class="sertif-item">
+                    <img src="sertif-splunk.jpg" alt="Sertifikat Splunk Enterprise Security Admin">
+                    <span>Splunk Enterprise Security Admin</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <footer>
+            <p>&copy; <span id="tahun">2026</span> Yoga Koswara - NIM 250401010510 - Kelas IF210</p>
+        </footer>
+
+    </div>
+
+    <!-- ============ JAVASCRIPT (interaksi sederhana) ============ -->
+    <script>
+        // Menampilkan pesan di console saat halaman dimuat
+        console.log("Website CV Yoga Koswara berhasil dimuat.");
+
+        // Menampilkan tahun saat ini secara otomatis di footer
+        const tahunSekarang = new Date().getFullYear();
+        document.getElementById("tahun").textContent = tahunSekarang;
+    </script>
+
+</body>
+</html>
